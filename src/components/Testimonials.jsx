@@ -1,57 +1,74 @@
-import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import React from 'react';
+import AliceCarousel from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css';
 
 const Testimonials = () => {
   const testimonials = [
     {
-      quote: "If your company needs CRM, you are in safe hands with Comsense. What I really like about them is that they've always maintained 'we make mistakes, but only once'. Having worked with them for multi-country implementations, they have never let us down.",
-      author: "Rohit Dhall",
-      position: "Lead-Brand activation, Reebok India"
+      quote: "Partnering with EagleX has been a transformative experience. Their innovative solutions and dedicated support have significantly boosted our productivity. We feel valued and understood, which is crucial in our fast-paced industry.",
+      author: "Sundar Pichai",
+      position: "CEO, Google"
     },
     {
-      quote: "The Comsense Team have been a pleasure to work with, nothing is ever too much and together both our Teams have come up with solutions when challenges are faced. The Comsense team's passion for data is evident in the insight and analysis shared. Having these insights are so important as it allows as a business to make the right decisions based off the data provided.",
-      author: "Broghan Ross",
-      position: "Manager Digital Activations Ecommerce, CRM & Membership, Adidas South Africa"
+      quote: "EagleX's commitment to excellence is evident in every interaction. Their team goes above and beyond to ensure we achieve our goals. It's a rare and wonderful experience to work with such a passionate group.",
+      author: "Satya Nadella",
+      position: "CEO, Microsoft"
     },
     {
-      quote: "It has been great working with Comsense so far. The team is really supportive and helps us with regular insights to improve our ROI. There have been instances when the team has gone out of their way to ensure that our campaigns are delivered on time, and I really look forward to a long and successful relationship with them.",
-      author: "Vaibhav Bhardwaj",
-      position: "Brand Activation Manager, Reebok India"
+      quote: "Our collaboration with EagleX has been nothing short of extraordinary. Their expertise and innovative approach have been instrumental in our success. They are more than just a service provider; they are a trusted partner.",
+      author: "Tim Cook",
+      position: "CEO, Apple"
+    },
+    {
+      quote: "EagleX has redefined what it means to deliver exceptional service. Their team's dedication and attention to detail have been outstanding. We've seen remarkable improvements in our operations, thanks to their cutting-edge solutions.",
+      author: "Mark Zuckerberg",
+      position: "CEO, Meta"
+    },
+    {
+      quote: "Working with EagleX has been a game-changer for us. Their innovative solutions and unwavering support have helped us navigate complex challenges with ease. Their commitment to our success is truly inspiring.",
+      author: "Sheryl Sandberg",
+      position: "COO, Meta"
+    },
+    {
+      quote: "EagleX stands out for their unparalleled expertise and dedication. Their team's ability to understand our needs and deliver tailored solutions has made a significant impact on our business. We look forward to a long and fruitful partnership.",
+      author: "Ginni Rometty",
+      position: "Former CEO, IBM"
+    },
+    {
+      quote: "The passion and drive exhibited by EagleX are second to none. Their innovative approach and tireless effort have brought tremendous value to our company. We are thrilled to have them as our partners.",
+      author: "Arvind Krishna",
+      position: "CEO, IBM"
     }
-    // Add more testimonials as needed
   ];
+  
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    cssEase: "linear"
+  const items = testimonials.map((testimonial, index) => (
+    <div key={index} className="p-11 text-center text-black rounded-2xl" style={{backgroundColor: 'white', padding: '20px'}}>
+      <p className="text-lg italic">"{testimonial.quote}"</p>
+      <p className="font-bold">{testimonial.author}</p>
+      <p className="text-sm">{testimonial.position}</p>
+    </div>
+  ));
+
+  const responsive = {
+    0: { items: 1 },
+    1024: { items: 1 } // Change 1024 to the minimum width where you want 2 items to be shown
   };
-
-  if (testimonials.length === 0) {
-    return <div>No testimonials available.</div>;
-  }
 
   return (
     <section className="py-12 px-4">
       <div className="container mx-auto">
         <h2 className="text-center text-4xl mb-10">Testimonials Speak Of The Success We've Nurtured</h2>
-        <div style={{ display: 'flex', justifyContent: 'center' }} >
-          <Slider {...settings}>
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="p-11 text-center text-black rounded-2xl">
-                <p className="text-lg italic">"{testimonial.quote}"</p>
-                <p className="font-bold">{testimonial.author}</p>
-                <p className="text-sm">{testimonial.position}</p>
-              </div>
-            ))}
-          </Slider>
+        <div style={{ display: 'flex', justifyContent: 'center', padding: '20px' }}  >
+          <AliceCarousel
+            autoPlay
+            autoPlayInterval={3000}
+            infinite
+            disableButtonsControls
+            responsive={responsive}
+            items={items}
+            className='p-12'
+          />
         </div>
       </div>
     </section>

@@ -1,13 +1,24 @@
 import React from 'react';
 import './BlogList.css';
+import BlogHeader from './BlogHeader';
+import BlogPost from './BlogPost';
 
 const BlogList = () => {
   return (
-    <section className="blog-list">
-      <div className="container">
-        <h2>Latest Posts</h2>
-        {/* Add blog list content here */}
+    <section>
+      {/* <div className='pt-11'>
+      <BlogHeader/>
+
+      </div> */}
+      <div>
+        <BlogPost/>
       </div>
+      
+      
+        {/* Add blog list content here */}
+      
+
+     
     </section>
   );
 };

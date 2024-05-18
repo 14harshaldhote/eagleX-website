@@ -1,14 +1,29 @@
-import React from 'react';
-// import './BlogPost.css';
+// BlogPost.js
+import React, { useState } from 'react';
+import BlogPostList from './BlogPostList';
+import BlogPostDetail from './BlogPostDetail';
+import BlogHeader from './BlogHeader';
 
 const BlogPost = () => {
+  const [selectedPost, setSelectedPost] = useState(null);
+
+  const handleSelectPost = (post) => {
+    setSelectedPost(post);
+  };
+
+  const handleBack = () => {
+    setSelectedPost(null);
+  };
+
   return (
-    <section className="blog-post">
-      <div className="container">
-        <h2>Blog Title</h2>
-        {/* Add blog post content here */}
-      </div>
-    </section>
+    <div>
+      <BlogHeader />
+      {selectedPost ? (
+        <BlogPostDetail post={selectedPost} onBack={handleBack} />
+      ) : (
+        <BlogPostList onSelectPost={handleSelectPost} />
+      )}
+    </div>
   );
 };
 
