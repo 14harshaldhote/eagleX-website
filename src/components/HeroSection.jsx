@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './HeroSection.css';
 import person from '../assets/images/bg2.png';
+import './HeroSection.css'
 
 const HeroSection = () => {
   const [text, setText] = useState('');
@@ -34,7 +34,7 @@ const HeroSection = () => {
   }, [text, isDeleting, loopNum, words]);
 
   return (
-    <div className="bg-deepBlue flex flex-col md:flex-row justify-between items-center p-6 md:p-12 lg:p-20">
+    <div className="hero-section">
       <div className="hero-content text-white flex-1 md:mr-10 lg:mr-20 mb-6 md:mb-0">
         <p className='text-2xl md:text-3xl lg:text-4xl'>
           Empowering your projects with cutting-edge <span style={{ color: '#DBE5F3', fontWeight: 'bold' }}>{text}</span><span>|</span>

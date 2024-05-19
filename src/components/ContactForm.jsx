@@ -24,13 +24,13 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="w-full ">
-      <div className="flex flex-col md:flex-row justify-center items-center bg-deepBlue p-6 md:p-44 ">
-        <div className="flex-1 mb-6 md:mb-0 md:mr-8 text-center">
+    <section className="w-full mt-20 md:mt-28">
+      <div className="flex flex-col md:flex-row justify-center items-center bg-deepBlue py-12 px-4 md:px-20 lg:px-44">
+        <div className="w-full md:w-1/2 max-w-lg text-center md:text-left mb-8 md:mb-0">
           <h2 className="text-2xl md:text-4xl font-semibold text-customLink">Contact Us</h2>
           <p className="text-customLink">Start your Voyage towards Meaningful Results</p>
         </div>
-        <form className="flex-1 space-y-4" onSubmit={handleSubmit}>
+        <form className="w-full md:w-1/2 max-w-lg space-y-4" onSubmit={handleSubmit}>
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-customLink">Your Name*</label>
             <input 

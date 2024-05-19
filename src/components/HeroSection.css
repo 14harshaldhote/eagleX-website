@@ -1,27 +1,46 @@
-/* HeroSection.css */
 .hero-section {
   display: flex;
+  flex-direction: column;
+  justify-between: space-between;
   align-items: center;
-  padding: 60px 0;
+  padding: 6rem 1.5rem;
+  background-color: #00246B; /* Deep Blue */
+  margin-top: 70px; /* Adjust this value to match the height of your header */
 }
 
-.hero-content {
-  flex: 1;
-}
-
-.hero-image {
-  flex: 1;
+.hero-content p {
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .hero-image img {
   width: 100%;
+  height: auto;
 }
 
-.cta-button {
-  padding: 15px 30px;
-  background-color: #ff6600;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+@media (min-width: 768px) {
+  .hero-section {
+    flex-direction: row;
+    padding: 12rem 3rem;
+  }
+
+  .hero-content p {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-section {
+    padding: 20rem 3rem;
+  }
+
+  .hero-content p {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-content p {
+    font-size: 3rem;
+  }
 }

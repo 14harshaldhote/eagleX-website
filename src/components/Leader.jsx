@@ -123,7 +123,7 @@ const Leader = () => {
             </button>
             <div className="flex flex-col md:flex-row">
               <div className="md:flex-shrink-0">
-                <img src={selectedLeader.image} alt={selectedLeader.name} className="w-full h-48 object-cover rounded-lg mb-4" />
+                <img src={selectedLeader.image} alt={selectedLeader.name} className="w-full h-full object-cover rounded-lg mb-4" />
               </div>
               <div className="md:ml-6">
                 <h3 className="text-2xl font-semibold mb-2">{selectedLeader.name}</h3>
