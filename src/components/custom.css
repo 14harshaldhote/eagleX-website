@@ -1,0 +1,63 @@
+/* custom.css */
+.leader-card {
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+  background-color: white;
+}
+
+.leader-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #00246B 50%, transparent 50%);
+  z-index: 0;
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(-100%);
+  pointer-events: none;
+}
+
+.leader-card:hover::before {
+  transform: translateX(0);
+}
+
+.leader-card .custom-cursor {
+  cursor: none;
+  position: relative;
+  z-index: 1;
+}
+
+.leader-card .custom-cursor::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-20%, -50%);
+  transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
+  z-index: 2;
+}
+
+.leader-card:hover .custom-cursor::before {
+  transform: scale(1.5) translate(-50%, -50%);
+  background: #00246B; /* deepBlue */
+}
+
+.leader-card:hover {
+  color: white;
+}
+
+.leader-card .bg-customLink {
+  background: #DBE5F3;
+  z-index: 1;
+  transition: background 0.5s ease-in-out;
+}
+
+.leader-card:hover .bg-customLink {
+  background:#DBE5F3;
+}

@@ -3,7 +3,7 @@ import blog from '../assets/images/blog.png';
 
 function BlogHeader() {
   return (
-    <div className="bg-deepBlue  w-full">
+    <div className="bg-deepBlue  w-full py-12">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center p-6 md:p-12 lg:p-20">
         <div className="hero-content text-white flex-1 md:mr-10 lg:mr-20 mb-6 md:mb-0">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-left">Latest Posts</h2>

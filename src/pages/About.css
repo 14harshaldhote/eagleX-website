@@ -1,21 +1,26 @@
-.about {
-    padding: 60px 0;
-    text-align: center;
+/* custom.css */
+.custom-cursor {
+    cursor: none;
+    position: relative;
   }
   
-  .about .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+  .custom-cursor::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s ease-in-out;
   }
   
-  .about h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
+  .group:hover .custom-cursor::before {
+    transform: scale(1.5) translate(-50%, -50%);
   }
   
-  .about p {
-    font-size: 18px;
-    color: #666;
+  body.custom-cursor-enabled {
+    cursor: none;
   }
   

@@ -8,6 +8,9 @@ import ServicesPage from './pages/Services';
 import PortfolioPage from './pages/Portfolio';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
+import DigitalSolutions from './components/services/DigitalSolutions';
+import ITServices from './components/services/ITServices';
+import DataAnalytics from './components/services/DataAnalytics';
 
 const App = () => {
   return (
@@ -20,6 +23,9 @@ const App = () => {
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/portfolio" element={<PortfolioPage />} />
+            <Route path="/services/digital-solutions" element={<DigitalSolutions />} />
+            <Route path="/services/it-services" element={<ITServices />} />
+            <Route path="/services/data-analytics" element={<DataAnalytics />} />   
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>

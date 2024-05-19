@@ -24,8 +24,8 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="w-full">
-      <div className="flex flex-col md:flex-row justify-center items-center bg-deepBlue p-6 md:p-11">
+    <section className="w-full ">
+      <div className="flex flex-col md:flex-row justify-center items-center bg-deepBlue p-6 md:p-44 ">
         <div className="flex-1 mb-6 md:mb-0 md:mr-8 text-center">
           <h2 className="text-2xl md:text-4xl font-semibold text-customLink">Contact Us</h2>
           <p className="text-customLink">Start your Voyage towards Meaningful Results</p>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './HeroSection.css';
-import person from '../assets/images/person.jpg';
+import person from '../assets/images/bg2.png';
 
 const HeroSection = () => {
   const [text, setText] = useState('');
@@ -41,7 +41,7 @@ const HeroSection = () => {
         </p>
       </div>
       <div className="hero-image flex-1">
-        <img src={person} alt="Dashboard" className='rounded-lg bg-clay-500 shadow-lg shadow-blue-500/90' />
+        <img src={person} alt="Dashboard" className='rounded-lg ' />
       </div>
     </div>
   );
